@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de CEP</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <h1>Cadastro de CEP</h1>
+
+  <form id="cep-form">
+    <div>
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" name="cep" required>
+    </div>
+
+    <div>
+      <label for="logradouro">Logradouro:</label>
+      <input type="text" id="logradouro" name="logradouro">
+    </div>
+
+    <div>
+      <label for="bairro">Bairro:</label>
+      <input type="text" id="bairro" name="bairro">
+    </div>
+
+    <div>
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade" name="cidade">
+    </div>
+
+    <div>
+      <label for="estado">Estado (UF):</label>
+      <input type="text" id="estado" name="estado">
+    </div>
+    <p id="mensagem"></p>
+    <button type="submit" onclick="salvarCep()">Cadastrar</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
