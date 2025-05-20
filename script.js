@@ -39,7 +39,9 @@ function salvarCep() {
     } else {
         alert("Por favor, insira um CEP válido.");
     }
-    window.onload = function () {
+    
+}
+window.onload = function () {
         try {
             const cepSalvo = localStorage.getItem("cep");
             const logradouroSalvo = localStorage.getItem("logradouro");
@@ -48,7 +50,7 @@ function salvarCep() {
             const estadoSalvo = localStorage.getItem("estado");
 
             if (cepSalvo) {
-                document.getElementById("cep").value = cepSalvo;
+                document.getElementById("cep").value =  cepSalvo || "";
                 document.getElementById("logradouro").value = logradouroSalvo || "";
                 document.getElementById("bairro").value = bairroSalvo || "";
                 document.getElementById("cidade").value = cidadeSalvo || "";
@@ -61,4 +63,3 @@ function salvarCep() {
             alert("Erro ao restaurar os dados. Verifique sua conexão e tente novamente.");
         }
     }
-}
